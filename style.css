@@ -1,0 +1,141 @@
+/* Estilos generales */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #646464;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  margin: 0;
+}
+
+/* Caja central */
+.box {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  width: 80%;
+  max-width: 800px;
+  text-align: center;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  color: #333;
+  font-size: 34px;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor principal dentro de la caja */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+/* Estilo para las secciones de selección de moneda y entrada de cantidad */
+.currency {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 280px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#c1 {
+  background-color: #b3e5fc;
+}
+
+#c2 {
+  background-color: #cf5a5a;
+}
+
+select, input {
+  margin: 12px 0;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  width: 100%;
+  font-size: 16px;
+}
+
+input[type="number"] {
+  background-color: #fafafa;
+}
+
+/* Cuadro de respuesta para la tasa de cambio */
+.response-box {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #ffecb3;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-size: 20px;
+  color: #333;
+}
+
+/* Contenedor para el botón de intercambio y la tasa de cambio */
+.swap-rate-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.btn {
+  background-color: #00796b;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 30px;
+  cursor: pointer;
+  transition: background-color 0.4s, transform 0.4s;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  background-color: #004d40;
+  transform: scale(1.1);
+}
+
+.rate {
+  font-size: 22px;
+  color: #00796b;
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .currency {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 28px;
+  }
+}
